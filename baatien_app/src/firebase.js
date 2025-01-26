@@ -3,13 +3,13 @@ import firebase from 'firebase';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAHr5nbkWrKLGJrdLX9Gm72MHN089Xrvhs",
-  authDomain: "baatien-sab.firebaseapp.com",
-  projectId: "baatien-sab",
-  storageBucket: "baatien-sab.firebasestorage.app",
+  apiKey: "add your own api key",
+  authDomain: "your_databsase_name.firebaseapp.com",
+  projectId: "your_databsase_name",
+  storageBucket: "your_databsase_name.firebasestorage.app",
   messagingSenderId: "466018263491",
-  appId: "1:466018263491:web:ca7ac69b6a8393a405dd76",
-  measurementId: "G-CDST10WNDD"
+  appId: "Your_app_ID",
+  measurementId: "Your_measurment_id"
 };
 
 const db = firebaseApp.firestore();
