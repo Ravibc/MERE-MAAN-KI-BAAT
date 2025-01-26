@@ -1,0 +1,793 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root{
+    --blue:#3c6382;
+    --dark-blue:#0a3d62;
+    --red: #FF0000;
+    --new: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    --green: linear-gradient(315deg, #f5f186 0%, #9dfbc8 74%);
+}
+
+body{
+    background-color: rgba(240, 248, 255, 0.842);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border:none;
+    text-transform: capitalize;
+    transition: all .4s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+*::selection{
+    background:var(--dark-blue);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem 9%;
+    padding-top: 8rem;
+}
+
+.heading{
+    text-align: center;
+    color:var(--blue);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding:1rem;
+}
+
+header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    padding:2rem;
+}
+
+header .logo{
+    font-size: 3.5rem;
+    color:var(--dark-blue);
+}
+
+header .logo span{
+    color:var(--blue);
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    margin-left: .4rem;
+    padding:.5rem .5rem;
+    border-radius: .5rem;
+    color:var(--dark-blue);
+    font-weight: bold;
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    background: var(--new);
+    color:rgb(0, 0, 0);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header.sticky{
+    background: #F0F8FF;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+#menu{
+    font-size: 3rem;
+    color:var(--blue);
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    background:url("./assests/home-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+.home .content{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.home .content h1{
+    font-size: 5rem;
+    color:var(--dark-blue);
+}
+
+.home .content h3{
+    font-size: 4rem;
+    color:var(--blue);
+    font-weight: normal;
+}
+
+.home .content .btn{
+    display: inline-block;
+    padding:.7rem 3rem;
+    color:#fff;
+    background:var(--blue);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+.home .content .btn:hover{
+    background:var(--dark-blue);
+}
+
+
+
+.our-mission .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.our-mission .box-container .box{
+    flex:1 1 30rem;
+    border-radius: .5rem;
+    margin:1rem;
+    padding:1rem;
+    text-align: center;
+}
+
+.our-mission .box-container .box img{
+    height:12rem;
+    padding:1rem;
+}
+
+.our-mission .box-container .box h3{
+    color:var(--blue);
+    font-size: 2rem;
+}
+
+.our-mission .box-container .box p{
+    color:var(--dark-blue);
+    font-size: 1.4rem;
+    padding:1rem;
+}
+
+.our-mission .box-container .box:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    background-color: #ffcc99;
+    cursor:pointer;
+}
+
+
+
+
+
+.chat-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#chat-box {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#user-input {
+    width: calc(100% - 70px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.baatchit{
+    background-image: url("./assests/baatchit.png");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+.baatchit-des{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+.baatchit .column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-link{
+    text-decoration: none;
+    padding:.7rem 3rem;
+    color:#fff;
+    background:var(--blue);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    margin-left: 20vw;
+}
+.box-link:hover{
+    background: var(--dark-blue);
+}
+.baatchit .column .main-image img{
+    width: 43vh;
+}
+
+.baatchit .column .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.baatchit .column .box-container .box{
+    margin:1rem;
+    text-align: center;
+}
+
+.baatchit .column .box-container .box img{
+    width:20rem;
+    padding:1rem;
+}
+
+.baatchit .column .box-container .box h3{
+    font-size: 2rem;
+    color:var(--blue);
+}
+
+/* games section */
+
+.diary{
+    background-image: url("./assests/diary-entry.png");
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.diary .heading{
+    margin-left: 300px !important;
+    color: #13344b;
+}
+
+.diary-desc{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    margin-left: 300px;
+}
+
+.diary .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.diary .box-container .box{
+    flex:1 1 30rem;
+    border-radius: .5rem;
+    margin:1rem;
+    padding:1rem;
+    text-align: center;
+}
+
+.diary .box-container .box img{
+    height:25rem;
+    padding:1rem;
+}
+
+.diary .box-container .box h3{
+    color:var(--blue);
+    font-size: 2rem;
+}
+
+.diary .box-container .box p{
+    color:var(--dark-blue);
+    font-size: 1.4rem;
+    padding:1rem;
+}
+
+.diary .box-container .box:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    background-color: #ffcc99;
+    cursor:pointer;
+}
+
+/* music */
+
+.music{
+    background-image: url("./assests/music.png");
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+.music-desc{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+
+.music .column{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.music .column .box-container{
+    margin:1.5rem;
+    flex:1 1 50rem;
+    border:.1rem solid rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+}
+
+.music .column .box-container .title{
+    padding:1.5rem .5rem;
+    text-align: center;
+    font-size: 2.5rem;
+    background:var(--blue);
+    color:#fff;
+}
+
+.music .column .box-container:last-child .title{
+    background:#ff3300;
+}
+
+.music .column .box-container .box{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding:1rem;
+}
+
+.music .column .box-container .box img{
+    width:15rem;
+    padding:1rem;
+}
+
+.music .column .box-container .box h3{
+    font-size: 2rem;
+    color:var(--blue);
+}
+
+.music .column .box-container .box p{
+    font-size: 1.2rem;
+    color:var(--dark-blue);
+    padding:1rem 0;
+}
+
+/* games */
+
+.games{
+    background-image: url('./assests/game.png');
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.game-desc{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    margin-left: 350px;
+    text-align: left;
+}
+
+.games .box-link{
+    text-decoration: none;
+    padding:.7rem 3rem;
+    color:#fff;
+    background:var(--blue);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    margin-left: 2vw;
+}
+.games .box-link:hover{
+    background: var(--dark-blue);
+}
+
+.games .box{
+    margin:4rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.games .box .box-image{
+    height:400px;
+}
+
+.games .box {
+    text-decoration: none;
+    padding:.7rem 3rem;
+    color:#fff;
+    background:var(--blue);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+
+.games .box:hover{
+    background: var(--dark-blue);
+}
+
+
+
+/* comic section */
+
+.comic{
+    background-image: url('./assests/comic.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+
+.comic .column{
+    display: flex;
+    justify-content: center;
+}
+
+.comic-desc{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    margin-left: 350px;
+    text-align: left;
+}
+.comic .heading{
+    color: #0b2e52;
+    font-weight: bold;
+}
+.comic .box-link{
+    text-decoration: none;
+    padding:.7rem 3rem;
+    color:#fff;
+    background:var(--blue);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    margin-left: 2vw;
+}
+.comic .box-link:hover{
+    background: var(--dark-blue);
+}
+
+.comic .column .main-image img{
+    width:25vw;
+}
+
+.comic .column .box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.comic .column .box-container .box{
+    text-align: center;
+    margin:2rem;
+}
+
+.comic .column .box-container .box img{
+    width: 17rem;
+    height: 17rem;
+    padding:1rem;
+}
+
+.comic .column .box-container .box h3{
+    font-size: 2rem;
+    color:var(--blue);
+}
+
+/* mood */
+.mood{
+    background-image: url('./assests/mood.png');
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.mood-desc{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    margin-left: 130px;
+    text-align: left;
+}
+
+.mood .box-link{
+    text-decoration: none;
+    padding:.7rem 3rem;
+    color:#fff;
+    background:var(--blue);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    margin-left: 2vw;
+}
+.mood .box-link:hover{
+    background: var(--dark-blue);
+}
+
+.mood .box{
+    margin:4rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mood .box .box-image{
+    height:400px;
+}
+
+.mood .box {
+    text-decoration: none;
+    padding:.7rem 3rem;
+    color:#fff;
+    background:var(--blue);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+
+.mood .box:hover{
+    background: var(--dark-blue);
+}
+
+/* footer section */
+
+.footer{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+    margin:2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--blue);
+    padding:1rem 0;
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    color:var(--dark-blue);
+    padding:.5rem 0;
+}
+
+.footer .box-container .box a{
+    font-size: 1.5rem;
+    color:var(--dark-blue);
+    padding:.5rem 0;
+    display: block;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.footer .credit{
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    padding:2.5rem 1rem;
+    color:var(--dark-blue);
+}
+
+.footer .credit a{
+    color:var(--blue);
+}
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.footer-social a{
+    text-decoration: none;
+    padding-right: 10px;
+    color: black;
+}
+
+
+
+.scroll-top{
+    position: fixed;
+    bottom:7.5rem; right:1.5rem;
+    z-index: 1000;
+}
+
+.scroll-top img{
+    width:8rem;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float{
+    100%, 0%{
+        transform: translateY(0rem);
+    }
+
+    50%{
+        transform: translateY(-3rem);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width:991px){
+
+    section{
+        padding:1rem 3%;
+        padding-top: 8rem;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left: 0;
+        width:100%;
+        background:#fff;
+        padding:2rem;
+        border-top: .1rem  solid rgba(0,0,0,.1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    header .navbar.nav-toggle{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    header .navbar a{
+        display: block;
+        margin:1.5rem 0;
+        font-size: 2rem;
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    .baatchit .column .main-image img{
+        display: none;
+    }
+
+    .comic .column .main-image img{
+        display: none;
+    }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .home .content h1{
+        font-size: 4rem;
+    }
+
+    .home .content h3{
+        font-size: 3.5rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    .home .content h1{
+        font-size: 3.5rem;
+    }
+
+    .home .content h3{
+        font-size: 2.5rem;
+    }
+
+    .baatchit .column .box-container .box img{
+        width:14rem;
+    }
+
+    .music .column .box-container .box{
+        flex-flow: column;
+        text-align: center;
+    }
+
+}
